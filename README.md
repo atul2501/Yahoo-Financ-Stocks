@@ -122,16 +122,3 @@ Follow me on [Twitter](https://x.com/0xDavid_xyz) or [LinkedIn](https://www.link
 
 This project is open source and available under the [MIT License](LICENSE).
 ```
-
----
-
-### ✅ Next Step: Upload in One Click
-
-1. Save this content as `README.md` in your project directory.
-2. Run these commands:
-
-```bash
-git add README.md
-git commit -m "update: polished README with correct features and table"
-git push origin main
-```
