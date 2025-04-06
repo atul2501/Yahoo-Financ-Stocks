@@ -1,3 +1,11 @@
+
+- Headless mode being optional (but not active)
+- Cleaned up sample output table
+- Removed mention of `undetected-chromedriver` (unless you plan to use it)
+- Clean markdown formatting
+
+---
+
 ```markdown
 # 📈 Yahoo Finance US Stocks Scraper
 
@@ -10,11 +18,11 @@ This Python project automatically scrapes the **"Most Active" US stocks** from [
 
 ## 🚀 Features
 
-- ✅ **Headless web automation** using Selenium
+- ✅ Web automation using Selenium
 - ✅ Extracts: Symbol, Name, Price, Volume, Market Cap, PE Ratio, and more
 - ✅ Supports **multi-page scraping**
 - ✅ **Data cleaning & transformation** (volume, market cap, %, etc.)
-- ✅ Final export to **CSV** for downstream use (dashboards, analysis, ML)
+- ✅ Final export to **CSV** for dashboards, ML, or analysis
 
 ---
 
@@ -42,7 +50,9 @@ pip install selenium pandas numpy
 ## 💡 How It Works
 
 ### 1. Launches Chrome browser
-Uses Selenium WebDriver to open and maximize the Chrome browser window.
+Uses Selenium WebDriver to open and control the Chrome browser window (non-headless by default).
+
+> To enable **headless mode**, edit `stocks_scraper.py` and uncomment the headless option.
 
 ### 2. Navigates to Yahoo Finance
 Accesses the homepage and clicks on:
@@ -54,8 +64,8 @@ Iterates through all pages and scrapes:
 - 📌 **Stock Symbol**
 - 💼 **Company Name**
 - 💲 **Price**
-- 📈 **Change / % Change**
-- 🔄 **Volume & Avg Volume**
+- 🔁 **Change** and **% Change**
+- 🔄 **Volume** & **Avg Volume**
 - 💰 **Market Cap**
 - 🔍 **P/E Ratio**
 - 📆 **52-Week Change %**
@@ -72,10 +82,10 @@ Final output is saved as `yahoo_finance_stocks.csv`.
 
 ## 📂 Output Sample
 
-| Symbol | Name          | Price(USD) | Volume_M | Market_Cap_B | PE_Ratio | 52_WK_Change % |
-|--------|---------------|------------|----------|---------------|----------|----------------|
-| AAPL   | Apple Inc.    | 174.57     | 45.2     | 2891.5        | 30.4     | 15.6           |
-| TSLA   | Tesla, Inc.   | 245.12     | 60.1     | 915.3         | 75.2     | -12.4          |
+| Symbol | Name        | Price | Change | Change % | Volume_M | Market_Cap_B | PE_Ratio | 52_WK_Change % |
+|--------|-------------|--------|--------|-----------|----------|---------------|----------|----------------|
+| AAPL   | Apple Inc.  | 174.57 | 1.23   | 0.71      | 45.2     | 2891.5        | 30.4     | 15.6           |
+| TSLA   | Tesla, Inc. | 245.12 | -2.11  | -0.85     | 60.1     | 915.3         | 75.2     | -12.4          |
 
 ---
 
@@ -83,9 +93,20 @@ Final output is saved as `yahoo_finance_stocks.csv`.
 
 ```text
 📁 yahoo-stock-scraper/
-├── stocks_scraper.py     # Main scraping + data cleaning script
-├── requirements.txt      # Optional: dependencies list
+├── stocks_scraper.py         # Main scraping + data cleaning script
+├── requirements.txt          # Optional: dependencies list
 └── yahoo_finance_stocks.csv  # Output file (after run)
+```
+
+---
+
+## ⚙️ Optional Automation
+
+You can automate the scraper using a cron job:
+
+```bash
+# Example: run daily at 8 AM
+0 8 * * * /usr/bin/python3 /path/to/stocks_scraper.py
 ```
 
 ---
@@ -104,9 +125,13 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Let me know if you want to:
-- Include screenshots of the output
-- Turn this into a Python package
-- Or automate this to run daily/weekly
+### ✅ Next Step: Upload in One Click
 
-I can help polish those too.
+1. Save this content as `README.md` in your project directory.
+2. Run these commands:
+
+```bash
+git add README.md
+git commit -m "update: polished README with correct features and table"
+git push origin main
+```
