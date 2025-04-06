@@ -20,9 +20,9 @@ This Python project automatically scrapes the **"Most Active" US stocks** from [
 
 - ✅ Web automation using Selenium
 - ✅ Extracts: Symbol, Name, Price, Volume, Market Cap, PE Ratio, and more
-- ✅ Supports **multi-page scraping**
-- ✅ **Data cleaning & transformation** (volume, market cap, %, etc.)
-- ✅ Final export to **CSV** for dashboards, ML, or analysis
+- ✅ Supports multi-page scraping
+- ✅ Data cleaning & transformation (volume, market cap, %, etc.)
+- ✅ Final export to CSV  for dashboards, ML, or analysis
 
 ---
 
