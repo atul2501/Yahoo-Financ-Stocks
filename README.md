@@ -31,8 +31,8 @@ This Python project automatically scrapes the **"Most Active" US stocks** from [
 ### 1. Clone the repo
 
 ```bash
-git clone [https://github.com/atul2501/Yahoo-Finance-Stocks.git]
-cd yahoo-stock-scraper
+git clone https://github.com/atul2501/Yahoo-Finance-Stocks.git
+cd Yahoo-Finance-Stocks
 ```
 
 ### 2. Install dependencies
